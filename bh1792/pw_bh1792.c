@@ -100,6 +100,7 @@ uint16_t pw_Init(void)
 //                   ERROR_NONE              => No error
 //                   ERROR_PW_I2C            => I2C error with PW Sensor
 //===============================================================================
+/*
 uint16_t pw_StartMeasure(void)
 {
     int8_t     ret8  = BH1792_SUCCESS;
@@ -114,7 +115,7 @@ uint16_t pw_StartMeasure(void)
     MEAS_CTRL4_HIGH ctrl4_high = {0xFF};
     MEAS_CTRL5 ctrl5 = {0x03U, 0};
     MEAS_START start = { BH1792_PRM_MEAS_ST, 0 };
-    uint8_t    reg1;
+    //uint8_t    reg1;
     
     ret8 = bh1792_SoftReset();
     if (ret8 == BH1792_SUCCESS) {
@@ -150,6 +151,7 @@ uint16_t pw_StartMeasure(void)
     
     return (ret16);
 }
+*/
 
 //===============================================================================
 // @brief One More Start Measurement of Pulse Wave
@@ -195,6 +197,7 @@ uint16_t pw_OneMoreStartMeasure(void)
 //                   ERROR_NONE              => No error
 //                   ERROR_PW_I2C            => I2C error with PW Sensor
 //===============================================================================
+/*
 uint16_t pw_StopMeasure(void)
 {
     int8_t   ret8  = BH1792_SUCCESS;
@@ -209,7 +212,7 @@ uint16_t pw_StopMeasure(void)
     
     return (ret16);
 }
-
+*/
 //===============================================================================
 // @brief  Read Measurement Result
 // Need to read repeatedly in a period for RCYCLE parameter.
@@ -222,6 +225,7 @@ uint16_t pw_StopMeasure(void)
 //                   ERROR_PW_I2C            => I2C error with PW Sensor
 //                   ERROR_PW_NOT_MEASURE    => Must start the measurement
 //===============================================================================
+/*
 uint16_t pw_GetMeasureData(u16_pair_t *data)
 {
     int8_t   ret8  = BH1792_SUCCESS;
@@ -237,19 +241,17 @@ uint16_t pw_GetMeasureData(u16_pair_t *data)
             data->off    = ((uint16_t)reg[1] << 8) | (uint16_t)reg[0];
             data->on     = ((uint16_t)reg[3] << 8) | (uint16_t)reg[2];
         }
-        /*
         else
         {
             data->off    = 0xFFFF;
             data->on     = 0xFFFF;
         }
-        */
         ret16 = errorCode_8toU16(ret8);
     }
 
     return (ret16);
 }
-
+*/
 //===============================================================================
 // @brief Set Pulse Wave parameters
 // 

@@ -97,7 +97,7 @@ uint16_t lxCtrl(const u16_pair_t *data, TD_STATE td_stat, uint8_t *is_updated_le
 {
     uint16_t ret16 = ERROR_NONE;
     
-    uint8_t led_mS = 0U;
+    //uint8_t led_mS = 0U;
     uint8_t led_mA = 0U;
     
     const uint8_t led_config_w3[] = {
@@ -121,7 +121,7 @@ uint16_t lxCtrl(const u16_pair_t *data, TD_STATE td_stat, uint8_t *is_updated_le
     switch (td_stat) {
         case td_state_w1:
             if (s_pre_stat != td_state_w1) {
-                led_mS          = led_config_w1[0];
+                //led_mS          = led_config_w1[0];
                 led_mA          = led_config_w1[1];
                 *is_updated_led = 1U;
             }
@@ -129,7 +129,7 @@ uint16_t lxCtrl(const u16_pair_t *data, TD_STATE td_stat, uint8_t *is_updated_le
         
         case td_state_w3:
             if (s_pre_stat != td_state_w3) {
-                led_mS          = led_config_w3[0];
+                //led_mS          = led_config_w3[0];
                 led_mA          = led_config_w3[1];
                 *is_updated_led = 1U;
             }
@@ -148,7 +148,7 @@ uint16_t lxCtrl(const u16_pair_t *data, TD_STATE td_stat, uint8_t *is_updated_le
                 }
             }
             
-            led_mS = led_config_w5[s_led_lv][0];
+            //led_mS = led_config_w5[s_led_lv][0];
             led_mA = led_config_w5[s_led_lv][1];
             break;
         
