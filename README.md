@@ -22,7 +22,7 @@ The “[Secure Policy Configurator](https://www.infineon.com/dgdl/Infineon-Modus
 
 The CYB06447BZI-BLD53 MCU must be powered from a 2.5V power source to be able to complete the provisioning. The RDK3 has an SMPS [Switching Mode Power Supply] which can be easily adjusted to provide 3.3V or 2.5V to the MCU by switching the slide-switch “SW1” on the bottom side of the board. 
 
-<img src="D:\GitHub\TARGET_RDK3\images\voltage_switch.jpg" style="zoom:50%;" />
+<img src="images/voltage_switch.jpg" style="zoom:50%;" />
 
 ### Using the code example with a ModusToolbox™ IDE:
 
